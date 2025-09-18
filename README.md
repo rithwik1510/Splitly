@@ -193,3 +193,5 @@ Contributing, Security, and Releases
 - Build both apps: `npm run build`
 - Backend tests: `npm run test --workspace @splitwise/backend`
 - Frontend bundle report: `npm run analyze --workspace @splitwise/frontend`
+#   S p l i t l y  
+ 
