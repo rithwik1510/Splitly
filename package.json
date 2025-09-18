@@ -1,0 +1,33 @@
+{
+  "name": "splitwise-plus",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/frontend",
+    "apps/backend",
+    "packages/shared"
+  ],
+  "scripts": {
+    "setup": "node scripts/setup.mjs",
+    "dev": "concurrently \"npm:dev --workspace @splitwise/frontend\" \"npm:dev --workspace @splitwise/backend\"",
+    "lint": "concurrently \"npm:lint --workspace @splitwise/frontend\" \"npm:lint --workspace @splitwise/backend\"",
+    "build": "concurrently \"npm:build --workspace @splitwise/frontend\" \"npm:build --workspace @splitwise/backend\"",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "predev": "node scripts/predev.mjs",
+    "dev:frontend": "npm run dev --workspace @splitwise/frontend",
+    "dev:backend": "npm run dev --workspace @splitwise/backend",
+    "db:up": "docker compose up -d db",
+    "db:down": "docker compose down"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.4.0",
+    "@typescript-eslint/parser": "^7.4.0",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "kill-port": "^2.0.1",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.0"
+  }
+}

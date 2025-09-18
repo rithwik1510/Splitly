@@ -1,0 +1,10 @@
+node_modules
+.env
+.env.*
+.apps
+.next
+build
+dist
+coverage
+prisma/migrations
+.DS_Store

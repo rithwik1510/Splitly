@@ -1,0 +1,7 @@
+# Require review from core maintainers for changes to critical paths
+* @your-github-handle
+
+apps/frontend/* @your-github-handle
+apps/backend/*  @your-github-handle
+packages/shared/* @your-github-handle
+

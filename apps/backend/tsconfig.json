@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist",
+    "composite": true,
+    "module": "CommonJS",
+    "target": "ES2021",
+    "moduleResolution": "Node",
+    "tsBuildInfoFile": ".tsbuildinfo",
+    "paths": {
+      "@splitwise/shared": ["../../packages/shared/src"],
+      "@splitwise/shared/*": ["../../packages/shared/src/*"]
+    }
+  },
+  "include": ["src", "prisma"]
+}

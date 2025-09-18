@@ -1,0 +1,50 @@
+﻿Polish Recap (Completed)
+=======================
+
+1. Visual QA & Layout
+   - Introduced a shared `Container` component to align page gutters and max widths.
+   - Added global header/footer polish and consistent card padding across breakpoints.
+   - Extended responsive skeleton states for Split, Groups, History, Profile, and Settings routes so loading matches final layouts.
+   - Refined Split dashboard panels: demo banners, tab/filter buttons, snapshot tiles, and accessible highlight states.
+
+2. Accessibility Enhancements
+   - Added skip-to-content link, semantic landmarks, and `role` annotations on layout wrappers.
+   - Marked live regions for loading/error states, added SR text for menu toggles, and ensured spinners/toasts are screen-reader friendly.
+   - Expanded keyboard focus management by using button semantics for tabs/switchers and aria attributes during async fetches.
+
+3. Copy & Tone Alignment
+   - Normalized messaging across toasts, empty states, and onboarding (no contractions, clear imperatives).
+   - Documented tone, terminology, and patterns in `docs/COPY-GUIDE.md` for future contributors.
+   - Updated demo notices, empty states, and retry prompts to share the same Splitly vocabulary.
+
+4. Demo Safeguards
+   - Gated sample data via `NEXT_PUBLIC_ENABLE_DEMO_PREVIEW` (false by default in `.env.example`/`.env.local`).
+   - Added inline demo callouts on Split dashboard and clarified how to disable previews in env docs.
+
+5. Build Confidence
+   - Verified `next build` passes with new layouts/states and backend `vitest` suite remains green.
+
+Remaining Plan
+==============
+
+1. Performance Baseline & Optimization
+   - Capture Lighthouse scores (desktop + mobile) for `/split`, `/groups`, `/history` in both themes.
+   - Record Core Web Vitals, bundle breakdown, and flag images/assets needing compression or caching tweaks.
+   - Draft quick wins (React Query caching adjustments, memoization, CDN headers) and schedule implementation.
+
+2. Error Handling Polish
+   - Audit API failure experiences for expenses, settlements, auth, and balances.
+   - Ensure every toast provides actionable next steps (retry context, contact guidance) and surfaces network issues gracefully.
+   - Verify retry buttons/loading indicators exist where repeat attempts make sense (e.g., balance simplify, group fetch).
+
+3. Repo Hygiene & Documentation
+   - Sweep repo for TODOs/unused assets; tighten `.gitignore` if new build artifacts appear.
+   - Refresh README with final UI screenshots/GIFs, setup troubleshooting tips, and QA notes.
+   - Confirm supporting docs (`COPY-GUIDE`, `docs/TESTING.md`, env instructions) match the final feature set.
+
+4. Release Readiness
+   - Run full lint/type/test suite across frontend/backend; fix any residual warnings.
+   - Lock semantic version, prepare CHANGELOG entry, and outline release notes (features, polish highlights, known gaps).
+   - Document environment flags (`NEXT_PUBLIC_ENABLE_DEMO_PREVIEW`, backend rate limits) for production deploys.
+
+Use this checklist as the single source when we resume, so we can continue the polish sprint without losing context.
