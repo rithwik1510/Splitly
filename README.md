@@ -1,12 +1,43 @@
+<div align="center">
+
 # Splitly — Modern Expense Sharing
+
+</div>
+
+<p align="center">
+A polished, full‑stack Splitwise alternative for groups and friends. Track expenses with multiple split modes, multi‑currency balances, and simplified settlements — in a fast, accessible UI with dark/light themes. This monorepo includes a Next.js frontend and a TypeScript Express + Prisma backend.
+</p>
+
+<p align="center">
 
 [![CI](https://github.com/rithwik1510/Splitly/actions/workflows/ci.yml/badge.svg)](https://github.com/rithwik1510/Splitly/actions/workflows/ci.yml)
 [![CodeQL](https://github.com/rithwik1510/Splitly/actions/workflows/codeql.yml/badge.svg)](https://github.com/rithwik1510/Splitly/actions/workflows/codeql.yml)
+![Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)
 ![Node](https://img.shields.io/badge/Node-20+-339933?logo=node.js&logoColor=white)
+![Prisma](https://img.shields.io/badge/Prisma-ORM-2D3748?logo=prisma)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-336791?logo=postgresql&logoColor=white)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A polished, full‑stack Splitwise alternative for groups and friends. Track expenses with multiple split modes, multi‑currency balances, and simplified settlements — in a fast, accessible UI with dark/light themes. This monorepo contains a Next.js frontend and a TypeScript Express + Prisma backend.
+</p>
+
+---
+
+## 📚 Table of Contents
+
+- [✨ Features](#-features)
+- [🚀 Tech Stack](#-tech-stack)
+- [🏛️ Architecture](#️-architecture)
+- [📸 Screenshots](#-screenshots)
+- [🏁 Getting Started](#-getting-started)
+- [⚙️ Configuration](#️-configuration)
+- [🧪 Testing](#-testing)
+- [💡 Troubleshooting](#-troubleshooting)
+- [🚀 Recent Updates](#-recent-updates)
+- [🤝 Contributing](#-contributing)
+- [📜 License](#-license)
+
+---
 
 ## ✨ Features
 
@@ -50,12 +81,12 @@ See [ARCHITECTURE.md](ARCHITECTURE.md) for more details.
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="docs/assets/split-dashboard-dark.png" alt="Split dashboard — dark theme" width="80%">
+  <img src="https://raw.githubusercontent.com/rithwik1510/Splitly/main/docs/assets/split-dashboard-dark.png" alt="Split dashboard — dark theme" width="80%">
   <em>Split dashboard — quick totals, filters, and tabbed view across Individuals/Groups.</em>
 </p>
 
 <p align="center">
-  <img src="docs/assets/expense-editor-dark.png" alt="Expense editor — dark theme" width="80%">
+  <img src="https://raw.githubusercontent.com/rithwik1510/Splitly/main/docs/assets/expense-editor-dark.png" alt="Expense editor — dark theme" width="80%">
   <em>Expense editor — split modes (equal/unequal/percent/shares) and participants.</em>
 </p>
 
@@ -71,7 +102,7 @@ See [ARCHITECTURE.md](ARCHITECTURE.md) for more details.
 
 1.  Clone the repository:
     ```bash
-    git clone https://github.com/your-username/your-repo-name.git
+    git clone https://github.com/rithwik1510/Splitly.git
     ```
 2.  Install dependencies:
     ```bash
@@ -115,6 +146,26 @@ To run the tests, use the following command:
 ```bash
 npm run test --workspace @splitwise/backend
 ```
+
+## 💡 Troubleshooting
+
+- **CORS errors**: ensure backend `.env` `CORS_ORIGIN` includes the frontend origin(s) and restart the API.
+- **JWT Zod errors**: secrets must be =32 characters.
+- **Port already in use**: `npm run dev` clears ports 3000/4000 automatically; for stubborn cases run `npx kill-port 3000 4000` or terminate the PID shown by `netstat -ano`.
+- **Local Postgres**: `npm run db:up` brings the Docker service up and `npm run db:down` stops it. Verify it with `docker ps` or `docker exec splitwise_plus_db psql -U postgres -l`. Set `SKIP_DB_BOOT=1` if you manage the database yourself.
+
+## 🚀 Recent Updates
+
+- Rebranded the product to **Splitly** and refreshed the UI with a teal-forward palette (`#14B8A6` / `#2DD4BF`) for light/dark themes.
+- Updated buttons, cards, inputs, auth pages, and group dashboards to use the new Splitly colors and typography accents.
+- Introduced a post-login Split tab with quick totals, filterable individual/group balances, and inline settle shortcuts.
+- Balance overview now reuses frontend settlements to surface owed/owing summaries per person and per group.
+- Deep links into group settle-up forms prefill counterparty/mode so follow-up actions stay frictionless.
+- Expense editor now lets you search for users and add them as participants on the fly before saving a split.
+- Pre-dev automation now waits for Dockerized Postgres, applies Prisma migrate/generate, and launches both apps with one `npm run dev`.
+- Polished the Split dashboard labels ("You are owed"/"You owe"), added demo preview balances, and improved accessibility cues across owed/owing tables.
+- Introduced a header profile menu with Profile/History/Settings routes, sample data safeguards, and reliable layering in light/dark themes.
+- Shipped dedicated Profile, History, and Settings surfaces with local preference storage and quick "Back to dashboard" controls to speed navigation.
 
 ## 🤝 Contributing
 
