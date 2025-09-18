@@ -1,11 +1,11 @@
-# Splitly — Modern Expense Sharing (Monorepo)
+﻿# Splitly â€” Modern Expense Sharing (Monorepo)
 
-[![CI](https://github.com/YOUR_USER/YOUR_REPO/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USER/YOUR_REPO/actions/workflows/ci.yml)
-[![CodeQL](https://github.com/YOUR_USER/YOUR_REPO/actions/workflows/codeql.yml/badge.svg)](https://github.com/YOUR_USER/YOUR_REPO/actions/workflows/codeql.yml)
+[![CI](https://github.com/rithwik1510/Splitly/actions/workflows/ci.yml/badge.svg)](https://github.com/rithwik1510/Splitly/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/rithwik1510/Splitly/actions/workflows/codeql.yml/badge.svg)](https://github.com/rithwik1510/Splitly/actions/workflows/codeql.yml)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)
 ![Node](https://img.shields.io/badge/Node-20+-339933?logo=node.js&logoColor=white)
 
-A polished, full‑stack Splitwise alternative for groups and friends. Track expenses with multiple split modes, multi‑currency balances, and simplified settlements — in a fast, accessible UI with dark/light themes. This monorepo contains a Next.js frontend and a TypeScript Express + Prisma backend.
+A polished, fullâ€‘stack Splitwise alternative for groups and friends. Track expenses with multiple split modes, multiâ€‘currency balances, and simplified settlements â€” in a fast, accessible UI with dark/light themes. This monorepo contains a Next.js frontend and a TypeScript Express + Prisma backend.
 
 ## Table of Contents
 - Features
@@ -23,11 +23,11 @@ A polished, full‑stack Splitwise alternative for groups and friends. Track exp
 
 ## Features
 - Expense tracking with split modes: equal, unequal, percent, shares
-- Multi‑currency groups + simplified settlements
-- Responsive, theme‑aware UI (light/dark) with a11y cues and keyboard support
+- Multiâ€‘currency groups + simplified settlements
+- Responsive, themeâ€‘aware UI (light/dark) with a11y cues and keyboard support
 - Dashboard overview of owed/owing across individuals and groups
-- Groups: members, expenses, balances, settle‑up history
-- OCR‑ready architecture and analytics hooks (roadmap)
+- Groups: members, expenses, balances, settleâ€‘up history
+- OCRâ€‘ready architecture and analytics hooks (roadmap)
 
 ## Tech Stack
 - Frontend: Next.js (App Router), React 18, TypeScript, Tailwind CSS, React Query, next-themes
@@ -39,12 +39,12 @@ A polished, full‑stack Splitwise alternative for groups and friends. Track exp
 
 ```mermaid
 flowchart LR
-  subgraph Web[Frontend — Next.js]
+  subgraph Web[Frontend â€” Next.js]
     UI[App Router Pages]
     Hooks[Data Hooks (React Query)]
   end
 
-  subgraph API[Backend — Express]
+  subgraph API[Backend â€” Express]
     Routes[REST Routes]
     Services[Domain Services]
     Prisma[(Prisma ORM)]
@@ -60,17 +60,17 @@ See ARCHITECTURE.md for deeper details on flows, auth, and data.
 
 ## Screenshots
 
-Place images in `docs/assets/` and reference them here. Recommended captures: Split dashboard (light/dark), Group detail, Expense editor, History. Suggested sizes: 1280×800 PNG for screenshots; short 5–10s MP4/WebM or GIF for flows.
+Place images in `docs/assets/` and reference them here. Recommended captures: Split dashboard (light/dark), Group detail, Expense editor, History. Suggested sizes: 1280Ã—800 PNG for screenshots; short 5â€“10s MP4/WebM or GIF for flows.
 
 <figure>
-  <img src="docs/assets/split-dashboard-dark.png" alt="Split dashboard — dark theme" width="1000" />
-  <figcaption>Split dashboard — quick totals, filters, and tabbed view across Individuals/Groups.</figcaption>
+  <img src="docs/assets/split-dashboard-dark.png" alt="Split dashboard â€” dark theme" width="1000" />
+  <figcaption>Split dashboard â€” quick totals, filters, and tabbed view across Individuals/Groups.</figcaption>
   
 </figure>
 
 <figure>
-  <img src="docs/assets/expense-editor-dark.png" alt="Expense editor — dark theme" width="1000" />
-  <figcaption>Expense editor — split modes (equal/unequal/percent/shares) and participants.</figcaption>
+  <img src="docs/assets/expense-editor-dark.png" alt="Expense editor â€” dark theme" width="1000" />
+  <figcaption>Expense editor â€” split modes (equal/unequal/percent/shares) and participants.</figcaption>
   
 </figure>
 
@@ -85,7 +85,7 @@ Bootstrap:
 npm run setup
 ```
 
-Run locally (both apps; DB auto‑starts via Docker unless disabled):
+Run locally (both apps; DB autoâ€‘starts via Docker unless disabled):
 ```bash
 npm run dev
 ```
@@ -131,11 +131,11 @@ npm run prisma:deploy   --workspace @splitwise/backend
 ## Common Scripts
 
 Workspace root:
-- `npm run setup` — install deps, copy envs, prep DB when reachable
-- `npm run dev` — start frontend + backend
-- `npm run build` — build both apps
-- `npm run lint` — lint both
-- `npm run db:up` / `db:down` — Docker Postgres
+- `npm run setup` â€” install deps, copy envs, prep DB when reachable
+- `npm run dev` â€” start frontend + backend
+- `npm run build` â€” build both apps
+- `npm run lint` â€” lint both
+- `npm run db:up` / `db:down` â€” Docker Postgres
 
 Frontend:
 - `npm run lint --workspace @splitwise/frontend`
@@ -152,7 +152,7 @@ Backend:
 - CI: GitHub Actions runs lint, tests, and builds on PRs to `main`
 
 ## Accessibility & Performance
-- Semantic landmarks, aria‑live for loading/error states, keyboard‑friendly components
+- Semantic landmarks, ariaâ€‘live for loading/error states, keyboardâ€‘friendly components
 - React Query caching & optimistic UI where appropriate
 - Lighthouse: capture Desktop/Mobile scores locally and add to README
 
@@ -184,4 +184,5 @@ Production flags:
 ---
 
 Enjoy building Splitly!
+
 
