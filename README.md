@@ -195,3 +195,10 @@ Contributing, Security, and Releases
 - Frontend bundle report: `npm run analyze --workspace @splitwise/frontend`
 #   S p l i t l y  
  
+## Screenshots
+
+Place images in `docs/assets/` and reference them below. Example embeds:
+
+<img src="docs/assets/split-dashboard-dark.png" alt="Split dashboard – dark theme" width="1000" />
+
+<img src="docs/assets/expense-editor-dark.png" alt="Expense editor – dark theme" width="1000" />
