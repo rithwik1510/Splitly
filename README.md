@@ -81,13 +81,27 @@ See [ARCHITECTURE.md](ARCHITECTURE.md) for more details.
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/rithwik1510/Splitly/main/docs/assets/split-dashboard-dark.png" alt="Split dashboard — dark theme" width="80%">
-  <em>Split dashboard — quick totals, filters, and tabbed view across Individuals/Groups.</em>
+  <img src="docs/assets/split-dashboard-hero.png" alt="Split dashboard hero section" width="90%">
+  <br />
+  <em>Split dashboard hero with quick context for participants, currency, and latest activity.</em>
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/rithwik1510/Splitly/main/docs/assets/expense-editor-dark.png" alt="Expense editor — dark theme" width="80%">
-  <em>Expense editor — split modes (equal/unequal/percent/shares) and participants.</em>
+  <img src="docs/assets/split-dashboard-full.png" alt="Split dashboard full view" width="90%">
+  <br />
+  <em>Full dashboard overview with balances, sharing groups, and add-expense panel.</em>
+</p>
+
+<p align="center">
+  <img src="docs/assets/expense-editor-detail.png" alt="Expense editor detailed form" width="90%">
+  <br />
+  <em>Expense editor form with split mode controls and participant selector.</em>
+</p>
+
+<p align="center">
+  <img src="docs/assets/expense-editor-full.png" alt="Expense editor complete panel" width="90%">
+  <br />
+  <em>Complete expense editor workflow with snapshot card and save action.</em>
 </p>
 
 ## 🏁 Getting Started
