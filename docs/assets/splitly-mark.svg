@@ -1,0 +1,21 @@
+<svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Splitly Logo Mark</title>
+  <desc id="desc">A geometric symbol showing one expense splitting into two paths and reconciling.</desc>
+  <defs>
+    <linearGradient id="bg" x1="16" y1="16" x2="144" y2="144" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1733"/>
+      <stop offset="1" stop-color="#081126"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="32" y1="24" x2="134" y2="124" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2DD4BF"/>
+      <stop offset="1" stop-color="#14B8A6"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="144" height="144" rx="32" fill="url(#bg)"/>
+  <rect x="8.75" y="8.75" width="142.5" height="142.5" rx="31.25" stroke="#1C2A4C" stroke-width="1.5"/>
+  <path d="M80 44V68M80 68L52 92M80 68L108 92M52 92V112M108 92V112M52 112L80 124M108 112L80 124" stroke="url(#accent)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="80" cy="38" r="8" fill="#2DD4BF"/>
+  <circle cx="52" cy="92" r="8" fill="#2DD4BF"/>
+  <circle cx="108" cy="92" r="8" fill="#2DD4BF"/>
+  <circle cx="80" cy="124" r="8" fill="#14B8A6"/>
+</svg>
